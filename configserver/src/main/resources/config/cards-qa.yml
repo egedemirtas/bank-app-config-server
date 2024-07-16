@@ -1,0 +1,8 @@
+cards:
+  message: "Welcome to bank API (Cards/QA)"
+  contactDetails:
+    name: "Rare Wind QA"
+    email: "rarewind@rarewind.com QA"
+  onCallSupport:
+    - 111
+    - 111

@@ -1,3 +1,13 @@
+spring:
+  application:
+    name: "bank-config-server"
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: "classpath:/config" # telling config server to where to look for
+
 server:
   port: 8071
-  
