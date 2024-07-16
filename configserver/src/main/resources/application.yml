@@ -2,12 +2,24 @@ spring:
   application:
     name: "bank-config-server"
   profiles:
-    active: native
+    # active: native # use native only if the configs are in classpath or in file system
+    active: git
   cloud:
     config:
       server:
-        native:
-          search-locations: "classpath:/config" # telling config server to where to look for
-
+        # native: # use native only if the configs are in classpath or in file system
+          # search-locations: "classpath:/config" # telling config server to where to look for
+        git:
+          uri: "https://github.com/egedemirtas/bank-app-config-server.git"
+          default-label: main # this is the default branch of bank-app-config-server
+          timeout: 5
+          # try to clone the config repo to the local system during startup,
+          # otherwise cloning of config repo will be made when the first request to config repo
+          # so, we try to load all the config beforehand,
+          # all configs will be ready before any requests are made
+          clone-on-start: true
+          # override any local changes when restarting config server,
+          # this will ensure config server reads the latest changes in the main branch
+          force-pull: true
 server:
   port: 8071
