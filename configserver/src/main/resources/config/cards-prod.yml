@@ -1,8 +1,0 @@
-cards:
-  message: "Welcome to bank API (Cards/prod)"
-  contactDetails:
-    name: "Rare Wind PROD"
-    email: "rarewind@rarewind.com PROD"
-  onCallSupport:
-    - 222
-    - 222

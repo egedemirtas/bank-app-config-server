@@ -1,8 +1,0 @@
-loans:
-  message: "Welcome to bank API (Loans/QA)"
-  contactDetails:
-    name: "Rare Wind QA"
-    email: "rarewind@rarewind.com QA"
-  onCallSupport:
-    - 111
-    - 111

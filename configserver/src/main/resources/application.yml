@@ -10,7 +10,7 @@ spring:
         # native: # use native only if the configs are in classpath or in file system
           # search-locations: "classpath:/config" # telling config server to where to look for
         git:
-          uri: "https://github.com/egedemirtas/bank-app-config-server.git"
+          uri: "https://github.com/egedemirtas/bank-app-config.git"
           default-label: main # this is the default branch of bank-app-config-server
           timeout: 5
           # try to clone the config repo to the local system during startup,
@@ -21,5 +21,9 @@ spring:
           # override any local changes when restarting config server,
           # this will ensure config server reads the latest changes in the main branch
           force-pull: true
+
+encrypt:
+  key: "thisIsAStrongPassword"
+
 server:
   port: 8071
